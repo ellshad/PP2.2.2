@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car table</title>
+</head>
+<body>
+<table border="1" align="center" width="50%">
+    <caption>
+        <span> COUNT OF CARS:</span>
+        <span th:text="${cars.size()}"> </span>
+        <caption/>
+
+        <tr>
+            <th>Model</th>
+            <th>Series</th>
+            <th>Year</th>
+        </tr>
+        <tr>
+        <tr th:each="car : ${cars}">
+            <td th:text="${car.getModel()}"></td>
+            <td th:text="${car.getSeries()}"></td>
+            <td th:text="${car.getYear()}"></td>
+        </tr>
+</table>
+
+</body>
+</html>
